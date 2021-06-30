@@ -1,0 +1,69 @@
+rougelike - rouge lite game;
+type: top down 2d --- sidescroller is really easy to make  - sidescoller is cool
+
+so box rooms - grouped by level
+     3 doors between long  side
+     2 doors between short side
+     overall structure is the same;
+     interconection between levels in randomized;
+
+players: 
+     stats:
+          power:
+          health:
+          defence;
+          mana:
+          speed:
+          range:
+          size:
+          level:
+          //not all need be used - just spitballing
+
+     controls:
+          how to shoot:
+          //i like arrows for shooting,
+          how to move:
+          //and wasd for movement... 
+          how to use effects:
+          //thinking shift? or q / e ? thoughts?
+          how to game control: 
+               pause: enter;
+                    menu:
+                         level reset:
+                         level select:
+                         toon select?:
+                         difficulty select:
+
+
+enemies:
+     how cute?
+     // what kind of game are we making really?
+
+
+items:
+     both positive and negative effects or just positive?
+     do items always have a cost?
+     do any items stay with you after you die?
+     do levels (or % of level) stay with you after you die?
+     generate random new ones, or encyclopedia of effects? or have minimal effects?
+
+to-do:
+// generator for rooms that link together properly
+      
+
+first steps:
+// learn library; 
+// figure out best workflow for multiple people;
+     //some combo of :
+          vscode live share:
+          git:
+          //such as pr->😠?(ls=>√):√ as a gist
+
+// make sprites move; -- done
+// make colision happen; --done 
+// have some kind particle effect --working one;
+// have a scene change --got multiple scenes (which act as containers to code)
+// have some kind of animation;
+
+//youtube tutorial(s) watched - goes over most everying - (play in 2x speed and skip around as needed)
+//change as needed;
