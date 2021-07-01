@@ -67,3 +67,23 @@ first steps:
 
 //youtube tutorial(s) watched - goes over most everying - (play in 2x speed and skip around as needed)
 //change as needed;
+
+Weston Says :
+{
+     Make swarm move
+     make swarm make formations that can be used in puzzles
+     bots comes from differetn materials
+     grind materials to get different bots 
+     different bots allow for different 
+
+     Bot Ideas: Ferral bots that can attach to animals
+                glue bots: help make different formations
+                bouncing boomers: bots that explode on contact
+                Shiny bots: reflect light ,light source can make laser
+                turret bot: weak advancing turret bots fighters til the end fire at everything 
+     
+     seperate your swarm cancel Last cancel ALL
+     
+
+     11111  11111  111111   11111111111
+}
