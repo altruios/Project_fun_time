@@ -92,3 +92,52 @@ Weston Says :
 
      11111  11111  111111   11111111111
 }
+
+toolbar of actions:
+robots give options:
+     Ferral bot options:
+          swarm;
+     Glue bot options:
+          stick;
+     sneaky bot options:
+          hide;
+     B.B.B(bouncing boomer bot) options:
+          kamakazi;
+     laser bots:
+          lasers;
+     W.A.T. (weak advancing turret) bot options:
+          fodder;
+     P.A.K.A. (perspective adjusting kelidoscope assult) bot:
+          distract;
+     fancy bot options:
+          dance;
+     water bott:
+          hose;
+
+advancment tree:
+     //last advancement is a "formation"?
+     Ferral bot:
+     swarm->spread->orb->bezerk
+          |            |->line_formation
+          ->tower->ladder
+
+     Glue bot:
+     stick->engluf            ->
+     (requires sneak::level2) -> trap -> (requires ladder::1)-> (glue+ladder power)
+
+     laser bots:
+          lasers-> x-rays->gamma-rays->cosmic-rays->hyperverse-rays->lolz-rays
+
+     water bot:
+          hose-> fire-hose;
+          bigger pipes -> reinforced pipes -> carbon fiber reinforced pipes -> neutrino infused netron plated pipes;
+          watercan -> water well->--| 
+                    ->void space->--L> world pressure-> black hole press pressure
+                              |->water world 
+
+     WAT bot:
+     fodder->shield->hold the door->never give up, never surrender -> active deconstruction
+               |         |                        ->run away;
+               |         L>more->from your past, damnit;
+               |
+               L>bubble shield->graviton shield->shieldforce force field -> electronutrino field
