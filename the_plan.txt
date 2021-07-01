@@ -1,44 +1,34 @@
-rougelike - rouge lite game;
-type: top down 2d --- sidescroller is really easy to make  - sidescoller is cool
+What the game is:
+     robot swarm - vs bunny swarm;
+     rouge-like-lite (assumed death of swarm in a run - upgrades based on how far you got in the run);
+     prestige system (reset the game for a bonus / reward); 
+     puzzle based, combat optional : solve puzzles with the robot swarm
+     2D sidescroller - tiled rooms linked together randomly.
+     push you luck elements - further down a level or cash out?
 
-so box rooms - grouped by level
-     3 doors between long  side
-     2 doors between short side
-     overall structure is the same;
-     interconection between levels in randomized;
 
-players: 
-     stats:
-          power:
-          health:
-          defence;
-          mana:
-          speed:
-          range:
-          size:
-          level:
-          //not all need be used - just spitballing
+what is the story:
+     meta:    
+     plot: robots are good, bunnies are evil. aliens are behind it. 
+     characters: "robot swarm", "bunny swarm"
 
-     controls:
-          how to shoot:
-          //i like arrows for shooting,
-          how to move:
-          //and wasd for movement... 
-          how to use effects:
-          //thinking shift? or q / e ? thoughts?
-          how to game control: 
-               pause: enter;
-                    menu:
-                         level reset:
-                         level select:
-                         toon select?:
-                         difficulty select:
-
+levels grouped by range of levels. (based on difficulty)
 
 enemies:
-     how cute?
-     // what kind of game are we making really?
-
+     (note: names are of course changeable)
+     buffy bubby:
+     duffy bunny:
+     huffy bunny:
+     muffy bunny:
+     puffy bunny:
+     wuffy bunny:  
+     chuffy bunny:
+     fluffy bunny:
+     toughy bunny:
+     truffy bunny:
+     roughy bunny:
+     scuffy bunny:
+     stuffy bunny:
 
 items:
      both positive and negative effects or just positive?
@@ -47,26 +37,72 @@ items:
      do levels (or % of level) stay with you after you die?
      generate random new ones, or encyclopedia of effects? or have minimal effects?
 
-to-do:
-// generator for rooms that link together properly
-      
 
-first steps:
-// learn library; 
-// figure out best workflow for multiple people;
-     //some combo of :
-          vscode live share:
-          git:
-          //such as pr->😠?(ls=>√):√ as a gist
+  //////////////////////////////////
+ //       TO DO STAGES           //
+//////////////////////////////////
 
-// make sprites move; -- done
-// make colision happen; --done 
-// have some kind particle effect --working one;
-// have a scene change --got multiple scenes (which act as containers to code)
-// have some kind of animation;
+     always to be added to: as theses things go...
 
-//youtube tutorial(s) watched - goes over most everying - (play in 2x speed and skip around as needed)
-//change as needed;
+  //////////////////////////////////
+ // STAGE_ZERO (ish)             //
+//////////////////////////////////
+     
+     write story - expand details;
+     functionally balance robots as much as possible (make them useful at different puzzles)
+
+
+
+  //////////////////////////////////
+ // STAGE_ONE (ish)              //
+//////////////////////////////////
+
+     enemy path finding basic
+     enemy AI controls basic
+     swarm AI controls basics
+     design UI (temp)
+     swarm count / management for health and collision detection design
+     (probably sooner than later:) physics optimization for large number of colliding entites;
+     state management solution (do we want a redux-like store for game state?)
+
+
+  //////////////////////////////////
+ // STAGE_TWO (ish)              //
+//////////////////////////////////
+
+     design robot powers
+          -animate actions
+          -link ui option access
+     concept of death and reset implement
+          -health working:
+     fine tune UI:
+          -(can we do anything better than a wow style bottom bar?);
+     itereate
+          -fine tune basic game play 
+          -make sure is fun.
+     animations for characters
+          -any that are missed that is.
+
+  //////////////////////////////////
+ // STAGE_THREE (ish)            //
+//////////////////////////////////
+     
+     robot advancement tree
+     generator for rooms that link together properly
+     (any additional features)
+     build levels
+     play test
+
+
+  //////////////////////////////////
+ // STAGE_FOUR (ish)             //
+//////////////////////////////////
+     
+     //optimization
+     //proper art work
+     //proper music
+     //proper sfx
+     //proper credits
 
 Weston Says :
 {
@@ -81,15 +117,13 @@ Weston Says :
                 bouncing boomers: bots that explode on contact
                 Shiny bots: reflect light ,light source can make laser
                 turret bot: weak advancing turret bots fighters til the end fire at everything 
-		
-     
+
      seperate your swarm cancel Last cancel ALL
      main enemy is a swarm of bunnnies
      bunny that is trying to save the world
      bunny that is solve starvation
      SPIDER BUNNY
      Aliens talking Aliens are neutral 	
-
      11111  11111  111111   11111111111
 }
 
@@ -122,7 +156,7 @@ advancment tree:
           ->tower->ladder
 
      Glue bot:
-     stick->engluf            ->
+     stick->engluf------------->
      (requires sneak::level2) -> trap -> (requires ladder::1)-> (glue+ladder power)
 
      laser bots:
