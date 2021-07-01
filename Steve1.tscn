@@ -1,10 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=2 format=2]
 
 [ext_resource path="res://Steve.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Steve.gd" type="Script" id=2]
 
 [node name="Steve1" type="Node2D"]
 position = Vector2( 116.03, 498.922 )
 
-[node name="Steve" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
-script = ExtResource( 2 )
+[node name="Steve" parent="." instance=ExtResource( 1 )]
