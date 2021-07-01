@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://sprites/Steampunk_Robot_0.png" type="Texture" id=1]
 [ext_resource path="res://Steve.gd" type="Script" id=2]
 
 [sub_resource type="Curve" id=1]
@@ -11,18 +11,16 @@ bake_resolution = 285
 [sub_resource type="CurveTexture" id=2]
 curve = SubResource( 1 )
 
-[sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 5.71099, 9.48589 )
-
 [node name="Steve" type="KinematicBody2D"]
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( -0.49605, 0.297642 )
+position = Vector2( -0.683127, 0.204104 )
 scale = Vector2( 0.176329, 0.294144 )
 texture = ExtResource( 1 )
 normal_map = SubResource( 2 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -0.396851, 0.198425 )
-shape = SubResource( 3 )
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( -0.692555, 0.977547 )
+scale = Vector2( 1.01923, 0.985027 )
+polygon = PoolVector2Array( -1.40803, -3.79669, -1.34334, -3.83107, -0.711956, -3.80768, -0.524877, -4.22861, -0.641801, -4.81322, -0.407955, -5.21076, -0.0571857, -4.50922, 0.457276, -5.23415, 0.714507, -4.76645, 0.270199, -3.90122, 0.620968, -3.83107, 1.50958, -3.76092, 2.00066, -2.2643, 1.4862, -0.533838, 1.11205, -0.229838, 0.667738, -0.206453, 0.808045, 0.308008, 0.761277, 1.59416, 0.597584, 2.06186, 0.597584, 2.69324, 0.995123, 2.83355, 1.15881, 3.30124, 1.25235, 3.97939, -0.875648, 3.97939, -0.828878, 2.88032, -0.548263, 2.50616, -0.478109, 1.92155, -0.9458, 1.54739, -0.922416, 0.308008, -0.758724, -0.0895298, -1.13288, -0.159684, -2.09165, -1.56276, -2.1618, -2.33445, -1.41349, -3.85445 )

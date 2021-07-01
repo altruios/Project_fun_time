@@ -13,9 +13,6 @@ extents = Vector2( 512.457, 19.6469 )
 
 [node name="Block1" type="RigidBody2D" parent="."]
 position = Vector2( 282.379, 388.661 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="Sprite" type="Sprite" parent="Block1"]
 texture = ExtResource( 1 )
@@ -24,7 +21,7 @@ texture = ExtResource( 1 )
 shape = SubResource( 1 )
 
 [node name="floor" type="StaticBody2D" parent="."]
-position = Vector2( 527.679, 562.357 )
+position = Vector2( 525.902, 562.982 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -39,4 +36,4 @@ position = Vector2( -13.0666, 20.1936 )
 shape = SubResource( 2 )
 
 [node name="Steve" parent="." instance=ExtResource( 2 )]
-position = Vector2( 109.489, 483.264 )
+position = Vector2( 116.03, 498.922 )
