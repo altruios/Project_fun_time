@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://Steve1.tscn" type="PackedScene" id=2]
 [ext_resource path="res://mom.gd" type="Script" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -32,73 +33,7 @@ texture = ExtResource( 1 )
 position = Vector2( -13.0666, 20.1936 )
 shape = SubResource( 2 )
 
-<<<<<<< HEAD
 [node name="Node2D" type="Node2D" parent="."]
 script = ExtResource( 3 )
-=======
-[node name="Steve" parent="." instance=ExtResource( 2 )]
-position = Vector2( 116.03, 498.922 )
 
-[node name="Steve4" parent="." instance=ExtResource( 2 )]
-position = Vector2( 116.03, 498.922 )
-
-[node name="Steve12" parent="." instance=ExtResource( 2 )]
-position = Vector2( 116.03, 498.922 )
-
-[node name="Steve5" parent="." instance=ExtResource( 2 )]
-position = Vector2( 116.03, 498.922 )
-
-[node name="Steve3" parent="." instance=ExtResource( 2 )]
-position = Vector2( 116.03, 498.922 )
-
-[node name="Steve20" parent="." instance=ExtResource( 2 )]
-position = Vector2( 116.03, 498.922 )
-
-[node name="Steve21" parent="." instance=ExtResource( 2 )]
-position = Vector2( 116.03, 498.922 )
-
-[node name="Steve22" parent="." instance=ExtResource( 2 )]
-position = Vector2( 116.03, 498.922 )
-
-[node name="Steve13" parent="." instance=ExtResource( 2 )]
-position = Vector2( 116.03, 498.922 )
-
-[node name="Steve19" parent="." instance=ExtResource( 2 )]
-position = Vector2( 116.03, 498.922 )
-
-[node name="Steve2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 116.03, 498.922 )
-
-[node name="Steve14" parent="." instance=ExtResource( 2 )]
-position = Vector2( 116.03, 498.922 )
-
-[node name="Steve18" parent="." instance=ExtResource( 2 )]
-position = Vector2( 116.03, 498.922 )
-
-[node name="Steve17" parent="." instance=ExtResource( 2 )]
-position = Vector2( 116.03, 498.922 )
-
-[node name="Steve6" parent="." instance=ExtResource( 2 )]
-position = Vector2( 116.03, 498.922 )
-
-[node name="Steve16" parent="." instance=ExtResource( 2 )]
-position = Vector2( 116.03, 498.922 )
-
-[node name="Steve15" parent="." instance=ExtResource( 2 )]
-position = Vector2( 116.03, 498.922 )
-
-[node name="Steve7" parent="." instance=ExtResource( 2 )]
-position = Vector2( 116.03, 498.922 )
-
-[node name="Steve8" parent="." instance=ExtResource( 2 )]
-position = Vector2( 116.03, 498.922 )
-
-[node name="Steve9" parent="." instance=ExtResource( 2 )]
-position = Vector2( 116.03, 498.922 )
-
-[node name="Steve10" parent="." instance=ExtResource( 2 )]
-position = Vector2( 116.03, 498.922 )
-
-[node name="Steve11" parent="." instance=ExtResource( 2 )]
-position = Vector2( 116.03, 498.922 )
->>>>>>> 0f6571eaf69aeeceb1916bfe8ce7324a3f6303dc
+[node name="Steve1" parent="." instance=ExtResource( 2 )]

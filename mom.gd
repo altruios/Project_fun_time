@@ -17,9 +17,7 @@ func make_steve():
 	add_child(node)
 
 func _process(delta):
-	n += delta
-	if n > 0.3 and count < 30:
+	if(Input.is_action_just_pressed("fire")):
+		print("fired")
 		make_steve()
-		n = 0.0
-		count += 1
-
+		
