@@ -4,6 +4,7 @@ var count = 0
 var center = Vector2(0.0, 0.0)
 var jitter = 25
 var width = 100
+var steve_count = 200
 
 onready var steve_tscn = load("res://steve.tscn")
 onready var rng = RandomNumberGenerator.new()
@@ -11,7 +12,7 @@ onready var camera = get_node("../camera")
 
 func _ready():
 	rng.randomize()
-	for _i in range(180):
+	for _i in range(steve_count):
 		make_steve()
 	
 func make_steve():
