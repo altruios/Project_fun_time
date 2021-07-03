@@ -124,6 +124,7 @@ Weston Says :
      bunny that is solve starvation
      SPIDER BUNNY
      Aliens talking Aliens are neutral 	
+     are bots are safe in destructive enviroments but seemingly passive peaceful enviornments kill us 
 
 toolbar of actions:
 robots give options:

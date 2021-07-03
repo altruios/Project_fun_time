@@ -6,3 +6,5 @@
 position = Vector2( 116.03, 498.922 )
 
 [node name="Steve" parent="." instance=ExtResource( 1 )]
+position = Vector2( 0, -3.05176e-05 )
+script = null
