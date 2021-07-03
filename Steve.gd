@@ -16,9 +16,9 @@ func _physics_process(delta):
 		
 	if(Input.is_action_just_pressed("jump") and jump_cool_down_timer < 1):
 		velocity.y+=(jump_force*3)
-		jump_cool_down_timer=60
+		jump_cool_down_timer=120
 		
-	jump_cool_down_timer=max(jump_cool_down_timer-1,0)
+	jump_cool_down_timer=min(jump_cool_down_timer-1,0)
 	
 	move_and_slide(velocity, Vector2.UP)
 	velocity.x *= 0.95
