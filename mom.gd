@@ -4,7 +4,7 @@ var count = 0
 var center = Vector2(0.0, 0.0)
 var jitter = 25
 var width = 100
-var steve_count = 200
+var robot_count = 20
 var jump_time = 50;
 var jump_cool_down_timer=0
 
@@ -17,26 +17,28 @@ onready var camera = get_node("../camera")
 
 func _ready():
 	rng.randomize()
-	for _i in range(steve_count):
-		make_random_robot()
-	
-func make_steve():
-	var node = steve_tscn.instance()
-	set_random_bot_spawn_position(node)
+	for _i in range(robot_count):
+		make_bob()
+		make_steve()
+		make_tim()
 
 func set_random_bot_spawn_position(node):
 	node.set_name("node")
 	var offset = Vector2(rng.randf_range(-100, 100), rng.randf_range(-100, 100))
 	node.set_position(center + offset) 
-	var scale = Vector2(rng.randf_range(1.5,2.5),rng.randf_range(1.5,2.5))
-	node.set_scale(scale)
+
 	add_child(node)
 	
 func make_bob():
 	var node = bob_tscn.instance()
 	set_random_bot_spawn_position(node)
+func make_steve():
+	var node = steve_tscn.instance()
+	set_random_bot_spawn_position(node)
 func make_tim():
-	 print("tim... when we make more - this is just a test")
+	var node = tim_tscn.instance()
+	set_random_bot_spawn_position(node)
+
 	 
 func make_random_robot():
 	 #to implement actually

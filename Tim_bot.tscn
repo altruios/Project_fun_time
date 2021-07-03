@@ -1,11 +1,16 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Steve_bot.tscn" type="PackedScene" id=1]
+[ext_resource path="res://sprites/animations/robot bob/0.png" type="Texture" id=1]
+[ext_resource path="res://Tim_bot.gd" type="Script" id=2]
 
-[node name="Steve1" type="Node2D"]
-position = Vector2( 116.03, 498.922 )
+[node name="KinematicBody2D" type="KinematicBody2D"]
+collision_mask = 2
+script = ExtResource( 2 )
 
-[node name="Steve" parent="." instance=ExtResource( 1 )]
-position = Vector2( 0, -3.05176e-05 )
-collision_mask = 6
-script = null
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -0.973389, -8.31514, 0.21788, -7.05379, 0.21788, -4.46103, -2.44496, -0.957291, -3.35593, 6.47063, -4.8275, 8.08234, -4.89757, 13.1978, -2.51503, 15.3701, -3.14571, 17.0519, -2.44496, 18.7337, -0.973389, 18.3133, 4.28222, 18.6636, 8.27647, 14.1088, 8.62685, 10.1145, 8.76699, 7.03122, 7.15528, 6.19033, 7.50565, -1.44781, 3.23109, -4.04058, 2.25005, -4.04058, 1.75953, -7.47424, 0.21788, -8.52536 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 2.10224, 5.5359 )
+scale = Vector2( 1.42045, 1.6151 )
+texture = ExtResource( 1 )
