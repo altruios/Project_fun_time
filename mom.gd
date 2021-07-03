@@ -5,7 +5,7 @@ var center = Vector2(0.0, 0.0)
 var jitter = 25
 var width = 100
 var steve_count = 200
-
+var spawn_functions = ["make_steve","make_bob","make_tim"]#more to add
 onready var steve_tscn = load("res://steve.tscn")
 onready var rng = RandomNumberGenerator.new()
 onready var camera = get_node("../camera")
@@ -13,7 +13,7 @@ onready var camera = get_node("../camera")
 func _ready():
 	rng.randomize()
 	for _i in range(steve_count):
-		make_steve()
+		make_random_robot()
 	
 func make_steve():
 	var node = steve_tscn.instance()
@@ -23,6 +23,24 @@ func make_steve():
 	var scale = Vector2(rng.randf_range(1.5,2.5),rng.randf_range(1.5,2.5))
 	node.set_scale(scale)
 	add_child(node)
+
+func make_bob():
+	 print("bob... when we make more - this is just a test")
+func make_tim():
+	 print("tim... when we make more - this is just a test")
+	 
+func make_random_robot():
+	 #to implement actually
+	 var random_index = rng.randi_range(0,len(spawn_functions)-1)#length of spawn functions 
+	 var chosed_function = spawn_functions[random_index]
+
+	 match chosed_function:
+		  "make_steve":
+			   make_steve()
+		  "make_bob":
+			   make_bob()
+		  "make_tim":
+			   make_tim();
 
 func _process(_delta):
 	var pos = Vector2(0,0)
