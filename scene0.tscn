@@ -14,6 +14,7 @@ extents = Vector2( 512.457, 19.6469 )
 
 [node name="Block1" type="RigidBody2D" parent="."]
 position = Vector2( 282.379, 388.661 )
+z_index = 1
 
 [node name="Sprite" type="Sprite" parent="Block1"]
 texture = ExtResource( 1 )
@@ -23,6 +24,7 @@ shape = SubResource( 1 )
 
 [node name="floor" type="StaticBody2D" parent="."]
 position = Vector2( 525.902, 563.793 )
+collision_layer = 2
 
 [node name="Sprite" type="Sprite" parent="floor"]
 position = Vector2( -13.8262, 20.4397 )

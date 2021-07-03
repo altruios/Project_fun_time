@@ -12,6 +12,7 @@ bake_resolution = 285
 curve = SubResource( 1 )
 
 [node name="Steve" type="KinematicBody2D"]
+collision_mask = 14
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
