@@ -9,9 +9,9 @@ var jump_time = 50;
 var jump_cool_down_timer=0
 
 var spawn_functions = ["make_steve","make_bob","make_tim"]#more to add
-onready var steve_tscn = load("res://steve_bot.tscn")
-onready var bob_tscn = load("res://bob_bot.tscn")
-onready var tim_tscn = load("res://tim_bot.tscn")
+onready var steve_tscn = load("res://robots/steve_bot.tscn")
+onready var bob_tscn = load("res://robots/bob_bot.tscn")
+onready var tim_tscn = load("res://robots/tim_bot.tscn")
 onready var rng = RandomNumberGenerator.new()
 onready var camera = get_node("../camera")
 

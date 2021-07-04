@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="game_project"
-run/main_scene="res://scene0.tscn"
+run/main_scene="res://levels/level0.tscn"
 config/icon="res://icon.png"
 
 [input]
