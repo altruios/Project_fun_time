@@ -26,33 +26,30 @@ func _ready():
 		_i=_i+make_random_robot()
 func set_random_bot_spawn_position(node):
 	node.set_name("node")
-	var offset = Vector2(rng.randf_range(-100, 100), rng.randf_range(-100, 100))
+	var offset = Vector2(
+		rng.randf_range(-100, 100), 
+		rng.randf_range(-100, 100)
+	)
 	node.set_position(center + offset) 
 	add_child(node)
 	
 func make_bob():
 	var node = bob_tscn.instance()
 	health=health+1;
+	set_random_bot_spawn_position(node)	
+	signal_add_robot("Bob")
 
-	set_random_bot_spawn_position(node)
-	print("signal emitted for bob")
-	emit_signal("make_robot","Bob")
-	emit_signal("change_health",health)
 func make_steve():
 	health=health+2;
 	var node = steve_tscn.instance()
 	set_random_bot_spawn_position(node)
-	print("signal emitted for Steve")
-	emit_signal("make_robot","Steve")
-	emit_signal("change_health",health)
+	signal_add_robot("Steve")
+
 func make_tim():
 	health=health+3;
 	var node = tim_tscn.instance()
 	set_random_bot_spawn_position(node)
-	print("signal emitted for Tim")
-	emit_signal("make_robot", "Tim")
-	emit_signal("change_health",health)
-	 
+	signal_add_robot("Tim")
 func make_random_robot():
 	#to implement actually
 	var random_index = rng.randi_range(0,len(spawn_functions)-1)#length of spawn functions 
@@ -76,18 +73,14 @@ func _process(_delta):
 		pos += node.position
 	center = pos / children.size()
 	camera.set_position(center)
-	if Input.is_key_pressed(49):
-		jitter = 15
-		width = 10
-	if Input.is_key_pressed(50):
-		jitter = 20
-		width = 100
-	if Input.is_key_pressed(51):
-		jitter = 30
-		width = 300
+	#todo/ add despawn checker here maybe? - not sure where else it would go
+
 func run_controls(node):
 	node.velocity.y=node.velocity.y+node.gravity
-	
+	if Input.is_key_pressed(49):
+		tighten_in()
+	if Input.is_key_pressed(50):
+		spread_out()
 	if (Input.is_action_pressed("left")):
 		node.velocity.x-=node.speed
 	if (Input.is_action_pressed("right")):
@@ -111,7 +104,20 @@ func _physics_process(_delta):
 		if abs(center.x - node.position.x) > width:
 			var offset = (center.x - node.position.x) / 15
 			node.velocity.x += offset
-		node.velocity += Vector2(rng.randf_range(-jitter, jitter), rng.randf_range(-jitter, jitter))
+		node.velocity += Vector2(
+			rng.randf_range(-jitter, jitter), 
+			rng.randf_range(-jitter, jitter)
+		)
 	if(Input.is_action_just_pressed("jump") and jump_cool_down_timer==0):
 		jump_cool_down_timer=jump_time;
 
+func spread_out():
+	jitter = 30
+	width = 300
+func tighten_in():
+	jitter = 15
+	width = 10
+
+func signal_add_robot(robot):
+	emit_signal("make_robot", robot)
+	emit_signal("change_health",health)
