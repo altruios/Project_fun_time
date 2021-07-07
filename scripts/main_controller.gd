@@ -35,33 +35,32 @@ func _ready():
 		
 func set_random_bot_spawn_position(node):
 	node.set_name("node")
-	var offset = Vector2(rng.randf_range(-100, 100), rng.randf_range(-100, 100))
+	var offset = Vector2(
+          rng.randf_range(-100, 100), 
+          rng.randf_range(-100, 100)
+     )
 	node.set_position(center_of_view + offset) 	
 func make_bob():
 	var node = bob_tscn.instance()
 	health=health+1;
 	set_random_bot_spawn_position(node)
-	print("signal emitted for bob")
-	emit_signal("make_robot","Bob")
-	emit_signal("change_health",health)
+	signal_add_robot("Bob")
 	add_child(node)	 
+
 
 func make_steve():
 	health=health+2;
 	var node = steve_tscn.instance()
 	set_random_bot_spawn_position(node)
-	print("signal emitted for Steve")
-	emit_signal("make_robot","Steve")
-	emit_signal("change_health",health)
+	signal_add_robot("Steve")
 	add_child(node)	 
+	
 
 func make_tim():
 	health=health+3;
 	var node = tim_tscn.instance()
 	set_random_bot_spawn_position(node)
-	print("signal emitted for Tim")
-	emit_signal("make_robot", "Tim")
-	emit_signal("change_health",health)	 
+	signal_add_robot("Tim")
 	add_child(node)	 
 
 func make_random_robot():
@@ -128,11 +127,10 @@ func run_controls(node, type):
 	
 
 	if(node.type!=type and type !="all"):
-		return; #for now - nothing by default
-		
-		
+		return; #
 
-	
+
+
 	if (Input.is_action_pressed("left")):
 		node.velocity.x-=node.speed
 	if (Input.is_action_pressed("right")):
@@ -140,9 +138,6 @@ func run_controls(node, type):
 
 	if(Input.is_action_just_pressed("jump") and jump_cool_down_timer < 1):
 		node.velocity.y+=(node.jump_force*3)
-
-	
-		
 	node.move_and_slide(node.velocity, Vector2.UP)
 	node.velocity.x *= 0.95
 func _physics_process(_delta):
@@ -156,8 +151,20 @@ func _physics_process(_delta):
 		if abs(center_of_view.x - node.position.x) > width:
 			var offset = (center_of_view.x - node.position.x) / 15
 			node.velocity.x += offset
-			
-		node.velocity += Vector2(rng.randf_range(-jitter, jitter), rng.randf_range(-jitter, jitter))
+		node.velocity += Vector2(
+			rng.randf_range(-jitter, jitter), 
+			rng.randf_range(-jitter, jitter)
+		)
 	if(Input.is_action_just_pressed("jump") and jump_cool_down_timer==0):
 		jump_cool_down_timer=jump_time;
 
+func spread_out():
+	jitter = 30
+	width = 300
+func tighten_in():
+	jitter = 15
+	width = 10
+
+func signal_add_robot(robot):
+	emit_signal("make_robot", robot)
+	emit_signal("change_health",health)
