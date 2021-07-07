@@ -101,3 +101,23 @@ text = "##health"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="camera" type="Label" parent="."]
+margin_left = 406.823
+margin_top = 146.607
+margin_right = 446.823
+margin_bottom = 160.607
+text = "camera:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="selected_robots" type="Label" parent="."]
+margin_left = 287.558
+margin_top = 58.9257
+margin_right = 327.558
+margin_bottom = 72.9257
+text = "selected:"
+__meta__ = {
+"_edit_use_anchors_": false
+}

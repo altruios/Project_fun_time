@@ -5,3 +5,4 @@ var speed=18
 var gravity = 31
 var jump_force = -250
 var jump_cool_down_timer=0;
+var type = "bob";

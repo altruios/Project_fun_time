@@ -9,6 +9,10 @@ func _ready():
 	$bob_count.text = "#" +String(bob_count)+ " :"+String(bob_count*2)+" health"
 	$tim_count.text ="#" + String(tim_count)+ " :"+String(tim_count*3)+" health"
 	$health.text = "total health: "+String(health)
+
+func _on_camera_update(x,y):
+	$camera.text="camera pos = x :"+String(x)+" ::: y:"+String(y);
+
 	
 func _on_make_robot(type):
 	match(type):
@@ -23,3 +27,7 @@ func _on_make_robot(type):
 func _on_change_heatlh(amount):
 	health=amount
 	_ready()
+
+
+func _on_select_robot(name):
+	$selected_robots.text = "selected :"+name

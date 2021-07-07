@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://icon.png" type="Texture" id=1]
 [ext_resource path="res://hud/debug_hud.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scripts/main_controller.gd" type="Script" id=3]
 [ext_resource path="res://tile stages/stage_0.tscn" type="PackedScene" id=4]
 [ext_resource path="res://hud/debug_hud.gd" type="Script" id=5]
+[ext_resource path="res://levels/camera.gd" type="Script" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 31.3118, 30.5944 )
@@ -52,9 +53,12 @@ drag_margin_h_enabled = true
 drag_margin_v_enabled = true
 editor_draw_limits = true
 editor_draw_drag_margin = true
+script = ExtResource( 6 )
 
 [node name="debug_hud" parent="." instance=ExtResource( 2 )]
 script = ExtResource( 5 )
 
 [connection signal="change_health" from="swarm" to="debug_hud" method="_on_change_heatlh"]
 [connection signal="make_robot" from="swarm" to="debug_hud" method="_on_make_robot"]
+[connection signal="select_robot" from="swarm" to="debug_hud" method="_on_select_robot"]
+[connection signal="send_pos" from="camera" to="debug_hud" method="_on_camera_update"]
