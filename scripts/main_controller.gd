@@ -136,7 +136,7 @@ func _physics_process(_delta):
 
 func spread_out():
 	jitter = 30
-	width = 300
+	width = 300 ;
 func tighten_in():
 	jitter = 15
 	width = 10
