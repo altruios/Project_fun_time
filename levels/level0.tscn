@@ -16,9 +16,12 @@ extents = Vector2( 512.457, 19.6469 )
 [node name="Node2D" type="Node2D"]
 
 [node name="Block1" type="RigidBody2D" parent="."]
-position = Vector2( 282.379, 388.661 )
+position = Vector2( 414.081, -64.0654 )
 z_index = 1
 collision_mask = 3
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Sprite" type="Sprite" parent="Block1"]
 texture = ExtResource( 1 )
